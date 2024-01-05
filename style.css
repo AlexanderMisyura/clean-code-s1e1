@@ -20,6 +20,12 @@ button {
   outline: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .header {
   width: 500px;
   margin: 0 auto;
