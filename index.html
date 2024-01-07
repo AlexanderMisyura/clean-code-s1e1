@@ -5,70 +5,76 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
-  <body>
+  <body class="page">
     <header class="header">
-      <img class="image"
-        src="./eisenhower-matrix.jpg"
-        alt="Eisenhower Matrix, a 2x2 grid for task prioritization. Quadrants labeled: Urgent and Important, Not Urgent but Important, Urgent but Not Important, Not Urgent and Not Important."
-      >
-      <a class="link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+      <div class="wrapper header__wrapper">
+        <img class="header__image"
+          src="./eisenhower-matrix.jpg"
+          alt="Eisenhower Matrix, a 2x2 grid for task prioritization. Quadrants labeled: Urgent and Important, Not Urgent but Important, Urgent but Not Important, Not Urgent and Not Important."
+        >
+        <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+      </div>
     </header>
-    <main class="main">
-      <article>
-        <h1 class="visually-hidden">The Eisenhower matrix. How to make decisions on what's urgent and important</h1>
-        <section id="add-task">
-          <h2 class="heading"><label for="new-task">Add Item</label></h2>
-          <div class="task-wrapper">
-            <input
-              id="new-task"
-              class="task task-input task-new"
-              type="text"
-            >
-            <button class="button">Add</button>
-          </div>
-        </section>
-        <section>
-          <h2 class="heading">Todo</h2>
-          <ul id="incompleted">
-            <li class="task-record">
-              <input class="task-check" type="checkbox">
-              <label class="task">Pay Bills</label>
-              <input type="text" class="task task-input">
-              <button class="button edit">Edit</button>
-              <button class="button delete">
-                <img class="button-icon" src="./remove.svg" alt="delete task">
-              </button>
-            </li>
-            <li class="task-record edit-mode">
-              <input class="task-check" type="checkbox">
-              <label class="task">Go Shopping</label>
-              <input
+    <main>
+      <div class="wrapper">
+        <article>
+          <h1 class="visually-hidden">The Eisenhower matrix. How to make decisions on what's urgent and important</h1>
+          <section class="tasks">
+            <h2 class="tasks__heading"><label for="new-task">Add Item</label></h2>
+            <ul class="tasks__list tasks__list_new">
+              <li class="task">
+                <input
+                id="new-task"
+                class="task__record task__input task__new"
                 type="text"
-                value="Go Shopping"
-                class="task task-input"
               >
-              <button class="button edit">Save</button>
-              <button class="button delete">
-                <img class="button-icon" src="./remove.svg" alt="delete task">
-              </button>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2 class="heading">Completed</h2>
-          <ul id="completed">
-            <li class="task-record">
-              <input class="task-check" type="checkbox" checked>
-              <label class="task">See the Doctor</label>
-              <input type="text" class="task task-input">
-              <button class="button edit">Edit</button>
-              <button class="button delete">
-                <img class="button-icon" src="./remove.svg" alt="delete task">
-              </button>
-            </li>
-          </ul>
-        </section>
-      </article>
+              <button class="button">Add</button>
+              </li>
+            </ul>
+          </section>
+          <section class="tasks">
+            <h2 class="tasks__heading">Todo</h2>
+            <ul class="tasks__list tasks__list_incompleted" id="incompleted">
+              <li class="task">
+                <input class="task__check" type="checkbox">
+                <label class="task__record tasks__label">Pay Bills</label>
+                <input type="text" class="task__record task__input">
+                <button class="button button_edit">Edit</button>
+                <button class="button button_delete">
+                  <img class="button__icon" src="./remove.svg" alt="delete task">
+                </button>
+              </li>
+              <li class="task task_edit">
+                <input class="task__check" type="checkbox">
+                <label class="task__record tasks__label">Go Shopping</label>
+                <input
+                  type="text"
+                  value="Go Shopping"
+                  class="task__record task__input"
+                >
+                <button class="button button_edit">Save</button>
+                <button class="button button_delete">
+                  <img class="button__icon" src="./remove.svg" alt="delete task">
+                </button>
+              </li>
+            </ul>
+          </section>
+          <section class="tasks">
+            <h2 class="tasks__heading">Completed</h2>
+            <ul class="tasks__list tasks__list_completed" id="completed">
+              <li class="task">
+                <input class="task__check" type="checkbox" checked>
+                <label class="task__record tasks__label">See the Doctor</label>
+                <input type="text" class="task__record task__input">
+                <button class="button button_edit">Edit</button>
+                <button class="button button_delete">
+                  <img class="button__icon" src="./remove.svg" alt="delete task">
+                </button>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
     </main>
     <script src="app.js"></script>
   </body>
